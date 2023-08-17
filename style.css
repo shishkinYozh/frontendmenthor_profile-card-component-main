@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --font-weight_regular: 400;
+    --font-weight_bold: 700;
+
+    --color_dark-cyan: hsl(185, 75%, 39%);
+    --color_very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --color_dark-grayish-blue: hsl(227, 10%, 46%);
+
+    --color_dark-gray: hsl(0, 0%, 59%);
+
+    --color_light-gray: hsl(0, 0%, 59%, 0.3);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    font-size: 18px;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-color: var(--color_dark-cyan);
+    background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat;
+    background-position-x: 120%, -20%;
+    background-position-y: 190%, -70%;
+}
+
+.main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.bio {
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.avatar {
+    border-radius: 50%;
+    border: 5px solid white;
+}
+.name {
+    font-weight: var(--font-weight_bold);
+    margin-top: 20px;
+}
+.age {
+    font-weight: var(--font-weight_regular);
+    margin-left: 10px;
+    color: var(--color_dark-grayish-blue);
+}
+.location {
+    color: var(--color_dark-grayish-blue);
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+.stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 25px;
+}
+.stats_number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: var(--font-weight_bold);
+    letter-spacing: 0.05rem;
+    gap: 0.2rem;
+}
+.stats_name {
+    font-size: 0.65rem;
+    font-weight: var(--font-weight_regular);
+    color: var(--color_dark-gray);
+    letter-spacing: 0.08rem;  
+}
+hr {
+    border-width: 0.1px;
+    width: 100%;
+    border-color: var(--color_light-gray);
+}
+
+@media (min-width: 600px) {
+    body {
+        background-position-x: -70%, 150%;
+        background-position-y: 140%, -80%;
+    }
+}
